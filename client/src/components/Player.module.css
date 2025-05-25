@@ -1,0 +1,9 @@
+.vcontainer {
+  padding-top: 16vh;
+  margin-top: 14px;
+  max-height: 87vh;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

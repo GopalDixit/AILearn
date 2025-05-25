@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer_left {
+  display: flex;
+  align-items: center;
+}
+
+.footer_middle {
+  flex-grow: 1;
+  text-align: center;
+  margin: 10px 0; /* Added margin for better spacing on smaller screens */
+}
+
+.footer_right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Adjust logo size as needed */
+  height: auto;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.website_name {
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_left,
+  .footer_right {
+    margin-bottom: 10px; /* Add margin between sections in mobile view */
+  }
+
+  .footer_middle {
+    margin: 0; /* Remove margin in mobile view */
+  }
+}

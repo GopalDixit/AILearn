@@ -1,0 +1,123 @@
+/* MultipleTextsTypingAnimation.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper .static {
+  color: #000;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.wrapper .dynamic {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic li {
+  list-style: none;
+  color: #fc6d6d;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(10) infinite;
+}
+.darkBack .dynamic li span::after {
+  background: rgb(51 65 85); /* Dark mode background color */
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .wrapper .static {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .wrapper .dynamic {
+    margin-left: 6rem;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .dynamic li {
+    font-size: 32px;
+    line-height: 50px;
+    animation: slideMobile 12s steps(4) infinite;
+  }
+
+  .dynamic li span {
+    line-height: 50px;
+  }
+
+  .dynamic li span::after {
+    border-left: 2px solid #fc6d6d;
+    animation: typingMobile 3s steps(10) infinite;
+  }
+
+  @keyframes slideMobile {
+    100% {
+      top: -200px;
+    }
+  }
+
+  @keyframes typingMobile {
+    40%, 60% {
+      left: calc(100% + 20px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+}

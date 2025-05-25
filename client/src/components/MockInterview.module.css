@@ -1,0 +1,192 @@
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  padding-top: 12vh;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #ccc;
+}
+
+.cameraSection{
+  height: 100%;
+  position: relative;
+  /* overflow: hidden; */
+  margin-bottom: 16px;
+}
+.editorSection {
+  height: 100%;
+  position: absolute;
+  /* overflow: hidden; */
+}
+
+.cameraSection {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faceWarning {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: red;
+  font-weight: bold;
+  background-color: #fff5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.toggleButton {
+  position: absolute;
+  bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+.editorSection {
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 5%;
+}
+.responsiveIframe{
+  width: 100%;
+  height: 100%;
+  /* border: 0; */
+}
+
+.rightPanel {
+  width: 35%;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.qaBoard {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.qaBoard h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.question {
+  font-weight: bold;
+  color: #444;
+}
+
+.answer {
+  color: #666;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 8vh;
+  }
+
+  .leftPanel {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .cameraSection {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+
+  .toggleButton {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .rightPanel {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .qaBoard {
+    padding: 15px;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .qaBoard h3 {
+    font-size: 18px;
+  }
+
+  .question,
+  .answer {
+    font-size: 14px;
+  }
+  .startButton {
+    position: static; /* or relative */
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    display: block; /* ensure it's not hidden */
+  }
+
+  .editorSection {
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .editorSection {
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .responsiveIframe{
+    width: 400px;
+    height: 400px;
+    
+  }
+}
+
