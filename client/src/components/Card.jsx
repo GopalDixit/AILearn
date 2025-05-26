@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import styles from "./Card.module.css";
 import Player from "./Player";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import CardDataApi from "./CardDataApi";
 const Card = ({
   title,
   description,
@@ -17,6 +18,8 @@ const Card = ({
   const className2 = darkMode ? styles.description1 : styles.description;
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
     useAuth0();
+
+  
 
   const handleButton = (e) => {
     console.log(id);
@@ -115,6 +118,7 @@ const Card = ({
           </div>
         </div>
       </div>
+      {/* <CardDataApi/> */}
     </>
   );
 };

@@ -16,6 +16,7 @@ import AboutUs from "./components/AboutUs";
 import PdfUploadComponent from "./components/PdfUploadComponent";
 import MockInterview from "./components/MockInterview";
 import Compiler from "./components/Compiler";
+import CardDataApi from "./components/CardDataApi";
 export const BASE_URL = "http://localhost:9000";
 const App = () => {
   const dummyData = [
@@ -170,6 +171,11 @@ const App = () => {
               setDarkMode={setDarkMode}
               youtube={youtube}
               setYoutube={setYoutube}
+            />
+            <CardDataApi
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+             
             />
           </Route>
 
