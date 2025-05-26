@@ -1,0 +1,10 @@
+add data
+https://ailearn-h7i5.onrender.com//api/courses
+
+format:
+{   "id": 19,
+    "title": "C++ Course",
+    "url":"https://www.youtube.com/embed/H-RKfV2ZJbI?si=18QyWHouPwvjcW8g",
+    "description": "his is the best AI course...",
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuw1y4TB2rdnAxUSvcPQ33o6NO-GPfjHJTeoFiyfE11paRhHCpF-oGEKrTsHS6avhA5tth&s"
+  }
