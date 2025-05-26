@@ -12,7 +12,7 @@ useEffect(() => {
 
   const fetchApiData = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/courses");
+      const res = await fetch("https://ailearns.onrender.com/api/courses");
       const data = await res.json();
       setApiData(data);
     } catch (error) {
